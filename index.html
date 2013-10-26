@@ -8,84 +8,65 @@
 
 
 		<style>
+		.product{
+			overflow: hidden;
+			background: #eaf2eb;
+			margin-bottom: 6px;
+			padding: 10px;
+		}
+
+		.productImages{
+			width: 40%;
+			float: left;
+		}
+
+		.productImage {
+			width: 90% !important;
+		}
+
+		.productDetails{
+			width: 55%;
+			float: left;
+			text-align: left;
+		}
 
 
-.product{
-	overflow: hidden;
-	background: #eaf2eb;
-	margin-bottom: 6px;
-	padding: 10px;
-}
+		.product_title{
+			margin-bottom: 0px;
+			color: #555 !important;
+			font-size: 10px;
+			text-transform: uppercase;
+		}
 
-.productImages{
-	width: 40%;
-	float: left;
-}
+		.price{
+			color:green;
+			font-family: arial;
+			font-weight: 200;
+			font-size: 9px;
+			margin-top: -8px;
+		}
 
-.productImage {
-	width: 90% !important;
-}
+		.date{
+			font-size: 9px;
+			margin-top: -8px;
+		}
 
-.productDetails{
-	width: 55%;
-	float: left;
-	text-align: left;
-}
+		[ng\:cloak], [ng-cloak], .ng-cloak {
+		  display: none !important;
+		}
 
-
-.product_title{
-	margin-bottom: 0px;
-	color: #555 !important;
-	font-size: 10px;
-	text-transform: uppercase;
-}
-
-.price{
-	color:green;
-	font-family: arial;
-	font-weight: 200;
-	font-size: 9px;
-	margin-top: -8px;
-}
-
-.date{
-	font-size: 9px;
-	margin-top: -8px;
-}
-
-</style>
-	    <meta charset="utf-8">
-	    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="viewport" content="width=device-width" />
-	    <title>Now | 2 Column Gallery</title>
-	    <meta name="description" content="">
-	    <meta name="keywords" content="">
-	    <meta name="author" content="Jan Šimeček - http://themeforest.net/user/xRicrdx">
-	    
+		</style>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width" />
+<title>Just Run! </title>
 
 	    
-    <!-- Web App Data -->
+<!-- Web App Data -->
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" name="viewport">
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 <!-- =Web App Data -->
-
-
-<!-- Icons -->
-<!-- non-retina iPhone pre iOS 7 -->
-<link rel="apple-touch-icon-precomposed" href="webapp/icon57.png" sizes="57x57">
-<!-- non-retina iPad pre iOS 7 -->
-<link rel="apple-touch-icon-precomposed" href="webapp/icon72.png" sizes="72x72">
-<!-- non-retina iPad iOS 7 -->
-<link rel="apple-touch-icon-precomposed" href="webapp/icon76.png" sizes="76x76">
-<!-- retina iPhone pre iOS 7 -->
-<link rel="apple-touch-icon-precomposed" href="webapp/icon114.png" sizes="114x114">
-<!-- retina iPhone iOS 7 -->
-<link rel="apple-touch-icon-precomposed" href="webapp/icon120.png" sizes="120x120">
-<!-- retina iPad pre iOS 7 -->
-<link rel="apple-touch-icon-precomposed" href="webapp/icon144.png" sizes="144x144">
-<!-- retina iPad iOS 7 -->
-<link rel="apple-touch-icon-precomposed" href="webapp/icon152.png" sizes="152x152">
 
 
 
@@ -190,7 +171,7 @@
 
 		        <header id="header">
 		        	<div id="menu-trigger" class="header-button left icon-menu"></div>
-		        	<h1><a href="index.html">N<span class="icon-clock-1"></span>W</a></h1>
+		        	<h1><a href="index.html">Just Run! <span class="icon-clock-1"></span></a></h1>
 		        </header>
 
 	        <!-- =Header -->
@@ -199,7 +180,14 @@
 		        		<div class="panel green" style="text-align:Center">
 			            	<p>{{category.toUpperCase()}}</p>
 			            </div>
-		        			<div ng-repeat="p in products" class="product">
+
+			            <div class="loading" ng-show="showLoading == true" style="text-align:center">
+		        			<img src="http://cdn.css-tricks.com/wp-content/uploads/2011/02/spinnnnnn.gif" />
+		        		</div>
+
+
+		        	 <div class="loading" ng-show="showLoading == false" style="text-align:center">
+		        		<div ng-repeat="p in products" class="product" ng-cloak>
 
 		        				<div class="productImages">
 		        					<img src="{{p.image.sizes.IPhone.url}}" alt="{{p.name}}" class="productImage">
@@ -213,6 +201,8 @@
 		        					<br/><a href="{{p.clickUrl}}" class="button green radius">Details</a>
 		        				</div>
 		        			</div>
+		        		</div>
+		        			<a href="#" class="button blue radius" style="margin-left:10px" ng-click="paginate()">Next</a>
 		        		
 		        	
 		        </div>

@@ -41,6 +41,11 @@ app.factory('app_service', ['$rootScope', '$q', '$http', function($rootScope, $q
     };  
 
 
+    self.paginate = function(post){
+        return self.makePost('paginate',post);
+    };
+
+
 	return {
 
 		init : function()
@@ -58,6 +63,9 @@ app.factory('app_service', ['$rootScope', '$q', '$http', function($rootScope, $q
 
         getDefaultItems : function(){
             return self.getDefaultItems();
+        },
+        paginate : function(post){
+            return self.paginate(post);
         }
 
 	};

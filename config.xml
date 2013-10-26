@@ -9,10 +9,10 @@
 	<preference name="phonegap-version" value="2.9.0" />
 	<preference name="fullscreen" value="false" />
 
-	<name>Just Run Men</name>
+	<name>Just Run! Men</name>
 
 	<description>
-		Just run mobile running sneaker store and shop. 
+		Just run mobile running sneaker store and shop for men. 
 	</description>
 
 	<author href="devverse@gmail.com"
@@ -31,31 +31,6 @@
 	<icon src="icons/icon.png" width="72" height="72" />
 	<icon src="icons/icon.png" width="48" height="48" />
 	<icon src="icons/icon.png" width="36" height="36"  gap:role="default"  />
-
-	<!-- Android -->
-	<icon src="icons/android/drawable_ldpi_ic_launcher.png" gap:platform="android" gap:density="ldpi" />
-	<icon src="icons/android/drawable_mdpi_ic_launcher.png" gap:platform="android" gap:density="mdpi" />
-	<icon src="icons/android/drawable_hdpi_ic_launcher.png" gap:platform="android" gap:density="hdpi" />
-	<icon src="icons/android/drawable_xhdpi_ic_launcher.png" gap:platform="android" gap:density="xhdpi" />
-
-	<!-- Iphone -->
-	<icon src="icons/ios/Icon-Small-50" gap:platform="ios" width="57" height="57" />
-	<icon src="icons/ios/Icon-72.png" gap:platform="ios" width="72" height="72" />
-	<icon src="icons/ios/Icon@2x.png" gap:platform="ios" width="114" height="114" />
-
-	<!-- retina iPad support: PhoneGap 2.5.0+ only -->
-	<icon src="icons/ios/Icon-72@2x.png" gap:platform="ios" width="144" height="144" />
-
-	<!-- BlackBerry -->
-	<icon src="icons/blackberry/icon.png" gap:platform="blackberry" />
-
-	<!-- Windows -->
-	<icon src="icons/windows/icon.png" gap:platform="winphone" />
-	<icon src="icons/windows/tileicon.png" gap:platform="winphone" gap:role="background" />
-
-	<!-- Web OS -->
-	<icon src="icons/webos/icon.png" gap:platform="webos" />
-	<icon src="icons/webos/miniicon.png" gap:platform="webos" gap:role="mini" />
 
     <gap:splash src="splash.jpg" />
 	<feature name="http://api.phonegap.com/1.0/network"/>
