@@ -1,10 +1,10 @@
 var url = window.location.href;
 
 if (url.indexOf("localhost") != -1) {
-	var serviceURL = "http://localhost/dev/devverse/public/running/";
+	var serviceURL = "http://localhost/dev/devverse/public/watch/";
 } else{
-	var serviceURL = "http://devverse.com/public/running/";
+	var serviceURL = "http://devverse.com/public/watch/";
 }
 
-var app_name = "RUN for Men";
-var page_title = "RUN";
+var app_name = "The Watch Shop";
+var page_title = "The Watch Shop";
