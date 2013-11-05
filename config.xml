@@ -4,15 +4,15 @@
 	xmlns:gap	= "http://phonegap.com/ns/1.0"
 	versionCode="1"
 	version 	= "1"
-	id        = "com.just.run.men">
+	id        = "com.watch.shop">
 
 	<preference name="phonegap-version" value="2.9.0" />
 	<preference name="fullscreen" value="false" />
 
-	<name>Just Run! Men</name>
+	<name>The watch shop</name>
 
 	<description>
-		Just run mobile running sneaker store and shop for men. 
+		Watch shop mobile app. Mens Watches
 	</description>
 
 	<author href="devverse@gmail.com"
