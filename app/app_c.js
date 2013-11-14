@@ -11,7 +11,7 @@ function appController($scope, $rootScope, app_service)
 	$scope.page_title = page_title;
 	$scope.products = [];
 	$scope.category = "Best Sellers";
-	$scope.searchStr = "nike";
+	$scope.searchStr = "casual";
 	$scope.page = 10;
 
 
