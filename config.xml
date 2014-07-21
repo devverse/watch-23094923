@@ -2,17 +2,17 @@
 
 <widget xmlns		= "http://www.w3.org/ns/widgets"
 	xmlns:gap	= "http://phonegap.com/ns/1.0"
-	versionCode="1"
-	version 	= "1"
-	id        = "com.watch.shop">
+	versionCode="1.5"
+	version 	= "1.5"
+	id        = "com.watchify">
 
-	<preference name="phonegap-version" value="2.9.0" />
+	<preference name="phonegap-version" value="3.4.0" />
 	<preference name="fullscreen" value="false" />
 
-	<name>The watch shop</name>
+	<name>Watchify</name>
 
 	<description>
-		Watch shop mobile app. Mens Watches
+		Watchify shop mobile app. Mens Watches
 	</description>
 
 	<author href="devverse@gmail.com"
@@ -22,8 +22,6 @@
 
 	<gap:platforms>
 		<gap:platform name="android" minVersion="2.4" />
-		<gap:platform name="webos" />
-		<gap:platform name="symbian.wrt" />
 		<gap:platform name="blackberry" project="widgets"/>
 	</gap:platforms>
 
@@ -34,7 +32,6 @@
 
     <gap:splash src="splash.jpg" />
 	<feature name="http://api.phonegap.com/1.0/network"/>
-
-	 <preference name="exit-on-suspend" value="false" />
-
+	
+	<gap:plugin name="com.phonegap.plugins.childbrowser" version="5.0.0" />
 </widget>

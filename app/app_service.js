@@ -1,73 +1,65 @@
-app.factory('app_service', ['$rootScope', '$q', '$http', function($rootScope, $q, $http) {
+app.factory('app_service', ['$rootScope', '$q', '$http',
+  function($rootScope, $q, $http) {
 
-	var api = serviceURL;
+    var api = serviceURL;
 
-	self.makePost = function (endpoint, post) {
+    self.makePost = function(endpoint, post) {
 
-        post = (!post) ? {} : post;
-        if(!endpoint) {
-            window.alert("Could not connect to database");
-            return;
+      post = (!post) ? {} : post;
+      if (!endpoint) {
+        window.alert("Could not connect to database");
+        return;
+      }
+
+      var deferred = $q.defer();
+      $http.post(api + endpoint, post).success(function(data) {
+        if (data) {
+          if (data == 'false') {
+            data = [];
+          }
+          deferred.resolve(data);
+        } else {
+          deferred.reject("Data was rejected: " + post);
         }
-
-        var deferred = $q.defer();
-        $http.post(api + endpoint, post).success(function (data) {
-            if(data) {
-                if(data == 'false') {
-                    data = [];
-                }
-                deferred.resolve(data);
-            } else {
-                deferred.reject("Data was rejected: " + post);
-            }
-        });
-        return deferred.promise;
+      });
+      return deferred.promise;
 
     };
 
-    self.getMenu = function(){
-    	return self.makePost('getMenu');
+    self.getMenu = function() {
+      return self.makePost('getMenu');
     };
 
-     self.search = function(search){
-
-
-        var post = "search=" + search;
-        return self.makePost('search',post);
+    self.search = function(search) {
+      var post = "search=" + search;
+      return self.makePost('search', post);
     };
 
-    self.getDefaultItems = function(){
-        return self.makePost('getDefaultItems','');
-    };  
-
-
-    self.paginate = function(post){
-        return self.makePost('paginate',post);
+    self.getDefaultItems = function() {
+      return self.makePost('getDefaultItems', '');
     };
 
 
-	return {
+    self.paginate = function(post) {
+      return self.makePost('paginate', post);
+    };
 
-		init : function()
-		{ 
+    return {
 
-		},
+      getMenu: function() {
+        return self.getMenu();
+      },
 
-		getMenu : function(){
-			return self.getMenu();
-		},
+      search: function(search) {
+        return self.search(search);
+      },
 
-        search : function(search){
-            return self.search(search);
-        },
-
-        getDefaultItems : function(){
-            return self.getDefaultItems();
-        },
-        paginate : function(post){
-            return self.paginate(post);
-        }
-
-	};
-
-}]);
+      getDefaultItems: function() {
+        return self.getDefaultItems();
+      },
+      paginate: function(post) {
+        return self.paginate(post);
+      }
+    };
+  }
+]);
