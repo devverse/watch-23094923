@@ -6,18 +6,17 @@
 	version 	= "1.5"
 	id        = "com.watchify">
 
-	<preference name="phonegap-version" value="3.4.0" />
+	<preference name="phonegap-version" value="3.3.0" />
 	<preference name="fullscreen" value="false" />
 
 	<name>Watchify</name>
 
 	<description>
-		Watchify shop mobile app. Mens Watches
+		Watchify. Mens Watches Mobile Shop
 	</description>
 
 	<author href="devverse@gmail.com"
 		email="devverse@gmail.com">
-		Just Run
 	</author>
 
 	<gap:platforms>
