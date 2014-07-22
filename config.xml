@@ -4,7 +4,7 @@
 	xmlns:gap	= "http://phonegap.com/ns/1.0"
 	versionCode="1.5"
 	version 	= "1.5"
-	id        = "com.watchify">
+	id        = "com.watch.shop">
 
 	<preference name="phonegap-version" value="3.3.0" />
 	<preference name="fullscreen" value="false" />
