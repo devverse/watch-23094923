@@ -4,7 +4,6 @@ app.factory('app_service', ['$rootScope', '$q', '$http',
     var api = serviceURL;
 
     self.makePost = function(endpoint, post) {
-
       post = (!post) ? {} : post;
       if (!endpoint) {
         window.alert("Could not connect to database");
@@ -23,7 +22,6 @@ app.factory('app_service', ['$rootScope', '$q', '$http',
         }
       });
       return deferred.promise;
-
     };
 
     self.getMenu = function() {
@@ -38,7 +36,6 @@ app.factory('app_service', ['$rootScope', '$q', '$http',
     self.getDefaultItems = function() {
       return self.makePost('getDefaultItems', '');
     };
-
 
     self.paginate = function(post) {
       return self.makePost('paginate', post);

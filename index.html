@@ -87,7 +87,7 @@
                 </div>
                 <nav id="nav-container">
                     <ul class="nav">
-                        <li ng-repeat="m in menu"> <a href="#" ng-click="search(m.search)" class> {{m.name.toUpperCase()}} </a>
+                        <li ng-repeat="m in menu"> <a href="#" ng-click="search(m.search)" class> {{m.name}} </a>
                         </li>
                     </ul>
                 </nav>
@@ -110,7 +110,7 @@
 
             <div id="content">
                 <div class="panel green" style="text-align:Center">
-                    <p>{{category.toUpperCase()}}</p>
+                    <p>{{category}}</p>
                 </div>
 
                 <div class="loading" ng-show="showLoading == true" style="text-align:center">

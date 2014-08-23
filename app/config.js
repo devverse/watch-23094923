@@ -6,5 +6,5 @@ if (url.indexOf("localhost") != -1) {
 	var serviceURL = "http://devverse.com/public/watch/";
 }
 
-var app_name = "The Watch Shop";
-var page_title = "The Watch Shop";
+var app_name = "Watchify";
+var page_title = "Watchify";

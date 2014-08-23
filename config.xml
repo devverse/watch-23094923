@@ -6,7 +6,7 @@
 	version 	= "1.5"
 	id        = "com.watch.shop">
 
-	<preference name="phonegap-version" value="3.3.0" />
+	<preference name="phonegap-version" value="3.5.0" />
 	<preference name="fullscreen" value="false" />
 
 	<name>Watchify</name>
@@ -29,8 +29,8 @@
 	<icon src="icons/icon.png" width="48" height="48" />
 	<icon src="icons/icon.png" width="36" height="36"  gap:role="default"  />
 
-    <gap:splash src="splash.jpg" />
+    <gap:splash src="splash.png" />
 	<feature name="http://api.phonegap.com/1.0/network"/>
 	
-	<gap:plugin name="com.phonegap.plugins.childbrowser" version="5.0.0" />
+	<gap:plugin name="org.apache.cordova.inappbrowser" version="0.2.4" />
 </widget>

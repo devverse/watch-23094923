@@ -7,6 +7,7 @@ app.config(['$httpProvider',
 ]);
 
 function appController($scope, $rootScope, app_service) {
+  
   $scope.app_name = app_name;
   $scope.page_title = page_title;
   $scope.products = [];
@@ -67,7 +68,6 @@ function appController($scope, $rootScope, app_service) {
   };
 
   $scope.completeSearch = function(search) {
-
     app_service.search(search).then(function(data) {
       $scope.products = data;
       $scope.setCache(search, data);
@@ -116,11 +116,8 @@ function appController($scope, $rootScope, app_service) {
 
   $scope.details = function(pproduct) {
     var url;
-
     url = product.clickUrl();
-    window.plugins.ChildBrowser.showWebPage(url, {
-      showLocationBar: true
-    });
+    window.open(url, '_blank', 'location=yes');
   }
 
   $scope.init = (function() {
