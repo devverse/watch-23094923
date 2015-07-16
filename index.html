@@ -1,172 +1,53 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<head>
-    <style>
-    .product {
-        overflow: hidden;
-        background: #eaf2eb;
-        margin-bottom: 6px;
-        padding: 10px;
-    }
-    .productImages {
-        width: 40%;
-        float: left;
-    }
-    .productImage {
-        width: 90% !important;
-    }
-    .productDetails {
-        width: 55%;
-        float: left;
-        text-align: left;
-    }
-    .product_title {
-        margin-bottom: 0px;
-        color: #555 !important;
-        font-size: 10px;
-        text-transform: uppercase;
-    }
-    .price {
-        color: green;
-        font-family: arial;
-        font-weight: 200;
-        font-size: 9px;
-        margin-top: -8px;
-    }
-    .date {
-        font-size: 9px;
-        margin-top: -8px;
-    }
-    [ng\:cloak],
-    [ng-cloak],
-    .ng-cloak {
-        display: none !important;
-    }
-    </style>
-    <meta charset="utf-8">
-    <title>Watchify!</title>
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
 
+<title>WatchShop</title>
 
-    <!-- Import Styles-->
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/framework.css" rel="stylesheet" type="text/css">
+<link href="css/custom.css" rel="stylesheet" type="text/css">
 
-    <link rel='stylesheet' href='css/vendor/normalize.css'>
-    <link rel='stylesheet' href='css/vendor/fontello.css'>
-    <link rel='stylesheet' href='css/style.css'>
-
-    <!-- =Import Styles-->
-
-
-    <!-- Modernizr & HTML5 Shiv -->
-
-    <script src='js/vendor/modernizr.js'></script>
-
-    <!--[if lt IE 9]>
-		<script src='js/vendor/html5shiv.js'></script>
-		<![endif]-->
-
-    <!-- =Modernizr & HTML5 Shiv -->
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jqueryui.js"></script>
+<script type="text/javascript" src="js/snap.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
 </head>
+<body cz-shortcut-listen="true">
 
-<body>
-  <!-- Container -->
-    <div id="container" ng-controller="appController" ng-app="app">
-        <!-- Main Content-->
+<div class="header">
+	<a href="http://enableds.com/products/slasher/tile-folio.html#" class="show-navigation"></a>
+    <a href="http://enableds.com/products/slasher/tile-folio.html#" class="hide-navigation"></a>
 
-        <!-- Sidebar -->
+    <a href="index.html" class="page-logo"> <h2>WatchShop</h2></a>
+</div>
 
-        <aside id="sidemenu-container">
-            <div id="sidemenu">
-                <div id="author-profile">
-                    <div class="author-profile-photo">
-                        <img src="icons/icon.png" alt="">
-                    </div>
-                    <div class="author-profile-content">
-                        <p class="title">Watchify</p>
-                    </div>
-                </div>
-                <nav id="nav-container">
-                    <ul class="nav">
-                        <li ng-repeat="m in menu"> <a href="#" ng-click="search(m.search)" class> {{m.name}} </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </aside>
-
-        <!-- =Sidebar -->
-
-        <section id="content-container">
-
-            <!-- Header -->
-
-            <header id="header">
-                <div id="menu-trigger" class="header-button left icon-menu"></div>
-                <h1><a href="index.html"> Watchify </a>
-                </h1>
-            </header>
-
-            <!-- =Header -->
-
-            <div id="content">
-                <div class="panel green" style="text-align:Center">
-                    <p>{{category}}</p>
-                </div>
-
-                <div class="loading" ng-show="showLoading == true" style="text-align:center">
-                    <img src="http://cdn.css-tricks.com/wp-content/uploads/2011/02/spinnnnnn.gif" />
-                </div>
-
-
-                <div class="loading" ng-show="showLoading == false" style="text-align:center">
-                    <div ng-repeat="p in products" class="product" ng-cloak>
-
-                        <div class="productImages">
-                            <img src="{{p.image.sizes.IPhone.url}}" alt="{{p.name}}" class="productImage">
-                        </div>
-
-                        <div class="productDetails">
-                            <span class="product_title">{{p.name}}</span>
-                            <br/>
-
-                            <span class="price">Retailer - {{p.retailer.name}}</span>
-                            <br/>
-                            <span class="price">{{p.priceLabel}}</span>
-                            <br/>
-                            <br/><a href="#" class="button green radius" ng-click="details(p)">Details</a>
-                        </div>
-                    </div>
-                </div>
-                <a href="#" class="button blue radius" style="margin-left:10px" ng-click="paginate()">Next</a>
-
-            </div>
-
-        </section>
-        <!-- =Main Content -->
-
+<div class="navigation">
+	<div class="navigation-wrapper">
+        <div class="nav-item">
+            <a href="#/" class="landing-icon">Home<em class="unselected-item"></em></a>
+        </div>
     </div>
-    <!-- =Container -->
+</div>
 
-    <!--jQuery & Google Maps -->
-    <script>
-    !window.jQuery && document.write('<script src="js/vendor/jquery.js"><\/script>')
-    </script>
+<div class="page-header-clear"></div>
 
-    <!-- Google Maps script -->
-
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpYpkxGMeJcDfwD5QJMhBZT0No7Jleg-E&amp;sensor=false"></script>
-
-    <!-- =jQuery & Google Maps -->
-    <script src='js/plugins/hammer.js'></script>
-    <script src='js/plugins/h5validate.js'></script>
-    <script src='js/plugins/prism.js'></script>
-    <script src='js/script.js'></script>
-
-
-    <script src="app/angular.js" type="text/javascript" charset="utf-8"></script>
-    <script src="app/config.js" type="text/javascript" charset="utf-8"></script>
-    <script src="app/app.js" type="text/javascript" charset="utf-8"></script>
-    <script src="app/app_c.js" type="text/javascript" charset="utf-8"></script>
-    <script src="app/app_service.js" type="text/javascript" charset="utf-8"></script>
+<div ng-app="mobileApp">
+    <div ng-view class="wide-item-wrapper">
+    </div>
+</div>
+           
+<script src="cordova.js"></script>  
+<script src="ads.js"></script>               
+<script src="app/angular.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/config.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/app.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/home_c.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/view_c.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/app_service.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>

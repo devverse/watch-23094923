@@ -2,17 +2,17 @@
 
 <widget xmlns		= "http://www.w3.org/ns/widgets"
 	xmlns:gap	= "http://phonegap.com/ns/1.0"
-	versionCode="2"
-	version 	= "1.5"
+	versionCode="3"
+	version 	= "2"
 	id        = "com.watch.shop">
 
 	<preference name="phonegap-version" value="3.5.0" />
 	<preference name="fullscreen" value="false" />
 
-	<name>Watchify</name>
+	<name>Watch Shop</name>
 
 	<description>
-		Watchify. Mens Watches Mobile Shop
+		Watch Shop. Mens Watches Mobile Shop
 	</description>
 
 	<author href="devverse@gmail.com"
