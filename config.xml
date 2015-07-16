@@ -6,7 +6,7 @@
 	version 	= "2"
 	id        = "com.watch.shop">
 
-	<preference name="phonegap-version" value="3.5.0" />
+	<preference name="phonegap-version" value="3.7.0" />
 	<preference name="fullscreen" value="false" />
 
 	<name>Watch Shop</name>
@@ -31,6 +31,7 @@
 
     <gap:splash src="splash.png" />
 	<feature name="http://api.phonegap.com/1.0/network"/>
-	
-	<gap:plugin name="org.apache.cordova.inappbrowser" version="0.2.4" />
+	 <preference name="exit-on-suspend" value="false" />
+	 <gap:plugin name="org.apache.cordova.inappbrowser" version="0.2.4" />
+	 <gap:plugin name="com.google.cordova.admob" source="plugins.cordova.io" />
 </widget>
