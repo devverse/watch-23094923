@@ -2,8 +2,8 @@
 
 <widget xmlns		= "http://www.w3.org/ns/widgets"
 	xmlns:gap	= "http://phonegap.com/ns/1.0"
-	versionCode="3"
-	version 	= "2"
+	versionCode="4"
+	version 	= "2.1"
 	id        = "com.watch.shop">
 
 	<preference name="phonegap-version" value="3.7.0" />

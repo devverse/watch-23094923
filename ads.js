@@ -2,8 +2,8 @@ var admobid = {};
 
 // for Android
 admobid = {
-    banner: 'ca-app-pub-0083160636450496/1973036359',
-    interstitial: 'ca-app-pub-0083160636450496/1973036359'
+    banner: 'ca-app-pub-0083160636450496/6672104353',
+    interstitial: 'ca-app-pub-0083160636450496/6672104353'
 };
 
 function showBannerAd() {
